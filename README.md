@@ -19,7 +19,7 @@ On any marketplace, a small subset of sellers is responsible for a disproportion
 - [📷 Architecture Diagram](#architecture-diagram)
 - [🚀 Overview](#-overview)
 - [✨ Key Features](#-key-features)
-- [🏗️ Architecture & Tech Stack](#%EF%B8%8F-architecture--tech-stack)
+- [‼️ Risk Score Methodology](#Risk-Score-Methodology)
 - [📁 Directory Structure](#-directory-structure)
 - [🛠️ Getting Started](#%EF%B8%8F-getting-started)
 - [🔌 Pipeline Usage](#-pipeline-usage)
@@ -47,22 +47,23 @@ graph TD
     J --> L[Markdown Business Report]
 ```
 
-## ⚠️ A note on the data
+## 🚀 Overview
+In marketplace operations, a minority of sellers often account for a majority of operational overhead (refunds, late shipments, and customer complaints). The **SellerHealth Watchlist** provides a systematic approach to identifying these sellers before they churn or degrade the customer experience. 
 
-This project was built in a sandboxed environment with no internet access,
-so the real Kaggle dataset ("Brazilian E-Commerce Public Dataset by Olist")
-could not be downloaded here. `src/generate_synthetic_data.py` generates data
-that matches its schema **exactly** — same filenames, same columns, same
-`order_status` values — with four deliberately-injected seller behavior
-patterns (healthy / chronically poor / suddenly-deteriorating / small-and-volatile)
-so the risk score and anomaly detector have something real to catch.
+Unlike "black-box" ML models, this system prioritizes **explainability**. Every risk score can be audited by an account manager, showing exactly how much late shipments, cancellations, or poor reviews contributed to the flag. This transparency is critical for coaching programs where sellers require specific, actionable feedback.
 
-**To use the real dataset:** download it from Kaggle, drop the CSVs into
-`data/raw/` (same filenames), and re-run `python src/load_to_sql.py`. Nothing
-else changes — no script downstream hardcodes a year, a row count, or a
-seller count.
+## ✨ Key Features
+- **Transparent Risk Scoring**: A composite 0-100 score based on weighted operational KPIs (Late Shipments 35%, Cancellations 30%, Review Scores 25%, Volume Trend 10%).
+- **Rolling Anomaly Detection**: Uses a pooled Z-score methodology to identify sellers with sudden performance drops, distinguishing between chronic low performers and acute operational failures.
+- **Interactive Streamlit Dashboard**: 
+    - **Marketplace Overview**: High-level health trends and regional risk distributions.
+    - **Seller Watchlist**: Filterable list of sellers with trend sparklines and anomaly markers.
+    - **Drill-Down View**: Deep dive into individual seller histories and score breakdowns.
+- **Power BI Export Layer**: Automates the generation of a star-schema (Fact/Dim) CSV set for advanced visualization in business intelligence tools.
+- **Automated Business Case**: Generates a Markdown-based business case summary that quantifies the potential cost savings of a coaching program based on the current data state.
 
-## Risk Score Methodology
+
+## ‼️ Risk Score Methodology
 
 Every seller-month gets a score from **0 (healthy) to 100 (highest risk)**,
 built from four components, each scored *relative to that month's other
