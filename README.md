@@ -24,22 +24,24 @@ ops manager can audit line by line, plus an anomaly flag for sellers who
 break down suddenly rather than gradually — deliberately *not* a black-box
 model, since a coaching program needs a score people will trust.
 
-## Architecture
+## Architecture Diagram
 
-```
-data/raw/*.csv  (Olist schema)
-        │
-        ▼  src/load_to_sql.py
-sql/schema.sql, seller_monthly_metrics.sql, seller_level_summary.sql
-        │
-        ▼  SQLite: data/processed/seller_health.db
-        │
-        ▼  src/run_analysis_pipeline.py
-src/risk_score.py  +  src/anomaly_detection.py
-        │
-        ├──▶ app.py + modules/  (Streamlit dashboard)
-        ├──▶ src/build_powerbi_export.py  ▶  powerbi_export/*.csv
-        └──▶ src/generate_business_case.py  ▶  reports/business_case_summary.md
+```mermaid
+graph TD
+    A[Raw CSV Data / Synthetic] --> B[src/load_to_sql.py]
+    B --> C[(SQLite: seller_health.db)]
+    C --> D[src/run_analysis_pipeline.py]
+    D --> E[src/risk_score.py]
+    D --> F[src/anomaly_detection.py]
+    E & F --> G[Processed Tables in SQLite]
+    G --> H[app.py - Streamlit UI]
+    G --> I[src/build_powerbi_export.py]
+    G --> J[src/generate_business_case.py]
+    H --> H1[Overview Module]
+    H --> H2[Watchlist Module]
+    H --> H3[Drill-Down Module]
+    I --> K[Star-Schema CSV Exports]
+    J --> L[Markdown Business Report]
 ```
 
 ## Project Structure
