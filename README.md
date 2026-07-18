@@ -20,7 +20,7 @@ On any marketplace, a small subset of sellers is responsible for a disproportion
 - [🚀 Overview](#-overview)
 - [✨ Key Features](#-key-features)
 - [‼️ Risk Score Methodology](#️-risk-score-methodology)
-- [📁 Directory Structure](#-directory-structure)
+- [📁 ❓How to Run on Local machine](#how-to-run-on-local-machine)
 - [🛠️ Getting Started](#%EF%B8%8F-getting-started)
 - [🔌 Pipeline Usage](#-pipeline-usage)
 - [🤝 Contributing](#-contributing)
@@ -86,7 +86,7 @@ was fine for a year and just broke down gets caught early — not only after
 it's chronic. Full method + the reasoning behind the pooled-std correction
 that fixed an early over-flagging bug: `src/anomaly_detection.py`.
 
-## How to Run Locally
+## ❓How to Run on Local machine 
 
 ```bash
 git clone https://github.com/thedikshantmahlawat/sellerhealth-watchlist.git
