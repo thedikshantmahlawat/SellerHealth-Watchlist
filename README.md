@@ -20,10 +20,11 @@ On any marketplace, a small subset of sellers is responsible for a disproportion
 - [🚀 Overview](#-overview)
 - [✨ Key Features](#-key-features)
 - [‼️ Risk Score Methodology](#️-risk-score-methodology)
-- [📁 ❓How to Run on Local machine](#how-to-run-on-local-machine)
-- [🛠️ Getting Started](#%EF%B8%8F-getting-started)
-- [🔌 Pipeline Usage](#-pipeline-usage)
-- [🤝 Contributing](#-contributing)
+- [❓ How to Run on Local machine](#how-to-run-on-local-machine)
+- [🚀 Deploying on Streamlit Cloud](#-deploying-on-streamlit-cloud)
+- [📖 Power BI Setup Guide](#-power-bi-setup-guide)
+- [Assumptions & Limitations](#assumptions--limitations)
+- [📍 Pushing to GitHub](#-pushing-to-github)
 - [📜 License](#-license)
 
 
@@ -86,7 +87,7 @@ was fine for a year and just broke down gets caught early — not only after
 it's chronic. Full method + the reasoning behind the pooled-std correction
 that fixed an early over-flagging bug: `src/anomaly_detection.py`.
 
-## ❓How to Run on Local machine 
+## ❓ How to Run on Local machine 
 
 ```bash
 git clone https://github.com/thedikshantmahlawat/sellerhealth-watchlist.git
@@ -104,7 +105,7 @@ python src/generate_business_case.py
 streamlit run app.py
 ```
 
-## Deploying on Streamlit Cloud
+## 🚀 Deploying on Streamlit Cloud
 
 1. Push this repo to GitHub (see below).
 2. Go to **share.streamlit.io** and sign in / connect your GitHub account.
@@ -116,7 +117,7 @@ streamlit run app.py
    memorable (e.g. `sellerhealth-watchlist.streamlit.app`) — paste that URL
    into the top of this README once deployed.
 
-## Power BI Setup Guide
+## 📖 Power BI Setup Guide
 
 1. Open Power BI Desktop → **Get Data → Text/CSV** (or **Get Data → Folder**
    pointed at `powerbi_export/`) → load all four files: `fact_seller_month.csv`,
@@ -208,7 +209,7 @@ chart of `Avg Risk Score` by `dim_region[region_name]`, and a table of
 - **Currency**: all monetary figures are in BRL (R$), the dataset's native
   currency.
 
-## Pushing to GitHub
+## 📍 Pushing to GitHub
 
 ```bash
 cd sellerhealth-watchlist
