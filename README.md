@@ -13,14 +13,7 @@ operations focus).
 
 ## Problem Statement
 
-On any marketplace, a small share of sellers drives a disproportionate share
-of late shipments, cancellations, and refund/CS cost — but without a
-systematic way to score and rank sellers, that concentration is invisible
-until it shows up in complaint volume or churn. This project builds a
-**simple, fully explainable** early-warning system: a composite risk score an
-ops manager can audit line by line, plus an anomaly flag for sellers who
-break down suddenly rather than gradually — deliberately *not* a black-box
-model, since a coaching program needs a score people will trust.
+On any marketplace, a small subset of sellers is responsible for a disproportionate share of late shipments, cancellations, and refund-related customer service costs. Without a systematic mechanism to score and rank sellers, this concentration of risk remains invisible until it manifests as rising complaint volumes or churn. This project addresses that gap with a lightweight, fully explainable early-warning system: a composite risk score that operations managers can audit line by line, paired with an anomaly flag that distinguishes sellers undergoing a sudden performance collapse from those declining gradually. The scoring approach is deliberately interpretable rather than a black box, since a coaching-based intervention program depends on a score that stakeholders can trust.
 
 ## Architecture Diagram
 
