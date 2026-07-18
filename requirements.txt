@@ -1,0 +1,9 @@
+# Kept deliberately minimal for Streamlit Cloud deployment.
+# No plotly/altair/duckdb/scikit-learn: every chart uses Streamlit's built-in
+# charting (st.line_chart / st.bar_chart / st.column_config), and the SQL
+# layer uses Python's built-in sqlite3 module (no separate DB driver to
+# install). This is the direct fix for past deployment issues caused by
+# heavier dependency trees.
+streamlit>=1.32
+pandas>=2.0
+numpy>=1.24
