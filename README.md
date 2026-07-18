@@ -20,7 +20,7 @@ On any marketplace, a small subset of sellers is responsible for a disproportion
 - [🚀 Overview](#-overview)
 - [✨ Key Features](#-key-features)
 - [‼️ Risk Score Methodology](#️-risk-score-methodology)
-- [❓ How to Run on Local machine](#how-to-run-on-local-machine)
+- [❓ How to Run on Local machine](#-how-to-run-on-local-machine)
 - [🚀 Deploying on Streamlit Cloud](#-deploying-on-streamlit-cloud)
 - [📖 Power BI Setup Guide](#-power-bi-setup-guide)
 - [Assumptions & Limitations](#assumptions--limitations)
