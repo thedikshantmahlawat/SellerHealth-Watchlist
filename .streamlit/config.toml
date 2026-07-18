@@ -1,0 +1,14 @@
+[theme]
+# Deliberate palette for a risk-monitoring tool: deep slate for structure,
+# a muted blue accent for interactive/data elements, semantic red/amber/green
+# reserved for risk state (used via custom CSS in app.py) rather than decoration.
+primaryColor = "#2563EB"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F4F6"
+textColor = "#1F2937"
+font = "sans serif"
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = true
