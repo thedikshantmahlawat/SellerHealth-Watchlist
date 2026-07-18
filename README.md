@@ -1,4 +1,5 @@
 # SellerHealth Watchlist
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![Python: 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg) ![Streamlit: 1.32+](https://img.shields.io/badge/Streamlit-1.32+-FF4B4B.svg)
 
 A lightweight, explainable seller-performance monitoring system for e-commerce
 marketplaces — built on the Olist Brazilian E-Commerce dataset schema, sliced
@@ -7,9 +8,6 @@ anomaly detection → an interactive dashboard → clean Power BI exports.
 
 Built as a portfolio project for Business Analyst roles (marketplace / seller
 operations focus).
-
-**Live app:** _add your Streamlit Cloud URL here after deploying (see below)_
-**Repo:** https://github.com/thedikshantmahlawat/sellerhealth-watchlist
 
 ---
 
