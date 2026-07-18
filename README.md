@@ -44,25 +44,6 @@ graph TD
     J --> L[Markdown Business Report]
 ```
 
-## Project Structure
-
-```
-sellerhealth-watchlist/
-├── data/
-│   ├── raw/                    Olist-schema CSVs (synthetic — see note below)
-│   ├── processed/              SQLite DB + scored CSV (pipeline output)
-│   └── synthetic_ground_truth.csv   validation-only, not a project input
-├── sql/                        schema + aggregation logic (documented inline)
-├── src/                        generator, SQL loader, risk score, anomaly
-│                               detection, Power BI export, business case
-├── modules/                    the 3 Streamlit dashboard modules
-├── app.py                      Streamlit entry point
-├── powerbi_export/             fact + dimension CSVs + data dictionary
-├── reports/                    auto-generated business case + submission report
-├── requirements.txt
-└── .streamlit/config.toml
-```
-
 ## ⚠️ A note on the data
 
 This project was built in a sandboxed environment with no internet access,
