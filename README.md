@@ -16,6 +16,7 @@ operations focus).
 On any marketplace, a small subset of sellers is responsible for a disproportionate share of late shipments, cancellations, and refund-related customer service costs. Without a systematic mechanism to score and rank sellers, this concentration of risk remains invisible until it manifests as rising complaint volumes or churn. This project addresses that gap with a lightweight, fully explainable early-warning system: a composite risk score that operations managers can audit line by line, paired with an anomaly flag that distinguishes sellers undergoing a sudden performance collapse from those declining gradually. The scoring approach is deliberately interpretable rather than a black box, since a coaching-based intervention program depends on a score that stakeholders can trust.
 
 ## 📖 Table of Contents
+- [📷 Architecture Diagram](#architecture-diagram)
 - [🚀 Overview](#-overview)
 - [✨ Key Features](#-key-features)
 - [🏗️ Architecture & Tech Stack](#%EF%B8%8F-architecture--tech-stack)
@@ -26,7 +27,7 @@ On any marketplace, a small subset of sellers is responsible for a disproportion
 - [📜 License](#-license)
 
 
-## Architecture Diagram
+## 📷 Architecture Diagram
 
 ```mermaid
 graph TD
