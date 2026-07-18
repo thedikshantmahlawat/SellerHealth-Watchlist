@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+.DS_Store
+.ipynb_checkpoints/
+*.log
+
+# Streamlit local runtime (not the committed .streamlit/config.toml)
+.streamlit/secrets.toml
+
+# Regenerable build artifacts -- app.py rebuilds these automatically from
+# data/raw/ if missing (see _ensure_pipeline_has_run in app.py). Keeping
+# them out of git keeps the repo small; run src/load_to_sql.py and
+# src/run_analysis_pipeline.py locally any time you want them on disk.
+data/processed/*.db
+data/processed/*.csv
+
+# Editor
+.vscode/
+.idea/
