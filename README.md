@@ -19,7 +19,7 @@ On any marketplace, a small subset of sellers is responsible for a disproportion
 - [📷 Architecture Diagram](#architecture-diagram)
 - [🚀 Overview](#-overview)
 - [✨ Key Features](#-key-features)
-- [‼️ Risk Score Methodology](#Risk-Score-Methodology)
+- [‼️ Risk Score Methodology](#️-risk-score-methodology)
 - [📁 Directory Structure](#-directory-structure)
 - [🛠️ Getting Started](#%EF%B8%8F-getting-started)
 - [🔌 Pipeline Usage](#-pipeline-usage)
